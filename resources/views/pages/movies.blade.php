@@ -14,14 +14,21 @@
 
         {{-- card del film --}}
         @foreach ($movies as $movie)
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body text-start">
-                        <h5 class="card-title">{{ $movie -> name }}</h5>
-                        <span>Release Date: {{ $movie -> release_date }}</span>
-                        <br>
-                        <span>Cash Out: {{ $movie -> cashOut }}</span>
-                    </div>
-                </div>   
+        <div class="card border border-3" style="width: 300px;">
+            <div class="card-body text-start">
+                <h5 class="card-title">{{ $movie -> name }}</h5>
+                <span>Release Date: {{ $movie -> release_date }}</span>
+                <br>
+                <span>Cash Out: {{ $movie -> cash_out }}</span>
+
+                <!-- link per eliminare il prodotto  -->
+                <div class="mt-3">
+                    <a href="{{route('delete.movie', $movie)}}" class="btn btn-danger mt-5">
+                        <i class="fa-solid fa-trash">X</i>
+                    </a>
+                </div>
+            </div>
+        </div>
             @endforeach
 
     </div>

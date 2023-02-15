@@ -19,4 +19,11 @@ class MainController extends Controller
         $movies = Movie :: all();
         return view('pages.movies', compact('movies'));
     }
+
+    // delete
+    public function delete(Movie $movie) {
+        $movie -> tags() -> sync([]);
+        $movie -> delete();
+        return redirect() -> route('movies');
+    }
 }

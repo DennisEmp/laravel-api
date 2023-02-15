@@ -23,3 +23,7 @@ Route::get('/', [MainController::class, 'home'])
     // show
 Route::get('/movies', [MainController::class, 'movies'])
     ->name('movies');
+
+    // delete
+Route::get('/delete/movie/{movie}', [MainController::class, 'delete'])
+->name('delete.movie');
