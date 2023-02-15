@@ -3,6 +3,11 @@
 @section('content')
     <h1 class="text-center bg-dark text-danger">Movie Categories</h1>
 
+    <a href="{{ route('movies') }}" class="btn btn-danger">
+        <i class="fa-solid fa-rectangle-list"></i>
+        All Movie
+    </a>
+
     @foreach ($genres as $genre)
 
     <div class="card my-5">
