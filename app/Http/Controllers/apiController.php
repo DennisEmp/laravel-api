@@ -10,7 +10,7 @@ use App\Models\Tag;
 
 class apiController extends Controller
 {
-    public function getMovieWTagWGenre() {
+    public function movieWtagWgenreAll() {
 
         $movies = Movie :: with('tags') 
             -> orderBy('created_at', 'desc')
